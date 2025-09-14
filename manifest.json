@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TanitJobs Dashboard Enhancer",
+  "version": "1.0",
+  "description": "Adds a dashboard, filter, and search/sort to TanitJobs application list.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.tanitjobs.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.tanitjobs.com/system/applications/view/*"],
+      "js": ["dashboard.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  }
+}
